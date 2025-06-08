@@ -10,7 +10,7 @@ llmModel = OpenAI()
 
 from langchain_openai import ChatOpenAI
 
-chatModel = ChatOpenAI(model="gpt-3.5-turbo-0125")
+chatModel = ChatOpenAI(model="gpt-4o-mini")
 
 
 from langchain_core.prompts import ChatPromptTemplate

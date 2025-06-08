@@ -9,7 +9,7 @@ llmModel = OpenAI()
 
 from langchain_openai import ChatOpenAI
 
-chatModel = ChatOpenAI(model="gpt-3.5-turbo-0125")
+chatModel = ChatOpenAI(model="gpt-4o-mini")
 
 from langchain_core.prompts import PromptTemplate
 
@@ -33,7 +33,8 @@ print("\n----------\n")
 
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
-from langchain_core.pydantic_v1 import BaseModel, Field
+#from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 from langchain_openai import ChatOpenAI
 
 # Define your desired data structure.
