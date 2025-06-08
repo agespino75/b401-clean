@@ -20,6 +20,13 @@ from langchain_core.prompts import FewShotChatMessagePromptTemplate
 examples = [
     {"input": "hi!", "output": "¡hola!"},
     {"input": "bye!", "output": "¡adiós!"},
+    {"input": "how are you?", "output": "¿cómo estás?"},
+    {"input": "what's your name?", "output": "¿cuál es tu nombre?"},
+    {"input": "I love programming.", "output": "me encanta programar."},
+    {"input": "What is the capital of France?", "output": "¿cuál es la capital de Francia?"},
+    {"input": "Translate 'good morning' to Spanish.", "output": "traduce 'buenos días' al español."},
+    {"input": "Translate 'good night' to Spanish.", "output": "traduce 'buenas noches' al español."},
+
 ]
 
 example_prompt = ChatPromptTemplate.from_messages(
@@ -50,5 +57,7 @@ print("\n----------\n")
 
 print("Translate: Who was JFK?")
 print(response.content)
-
+print("\n----------\n")
+print("Translate: Who was JFK?")
+print("Response:", response.content if hasattr(response, "content") else response)
 print("\n----------\n")
